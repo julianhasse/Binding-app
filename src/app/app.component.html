@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="jumbotron" [ngStyle]="{ 'background-color': this.color}">
+      <h1 class="display-4">{{title}}</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" (click)="changeTitle()" role="button">Toggle title</a>
+      </p>
+      <p>
+        <a class="btn btn-primary btn-lg" (click)="changeColor()" role="button">Change color</a>
+      </p>
+      <p *ngIf='this.toggle2'>
+        Background color: white
+      </p>
+      <p *ngIf='!this.toggle2'>
+        Background color: Green
+      </p>
+      <table>
+        <tr *ngFor='let product of products'>
+          <td></td>
+          <td>{{product}}</td>
+
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
